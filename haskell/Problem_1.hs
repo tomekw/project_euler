@@ -9,6 +9,9 @@
 
 module Problem_1 where
 
-sumOfMultiplies :: Integer
-sumOfMultiplies = sum $ filter multiplies [1 .. 999]
+problem_1 :: Integer
+problem_1 = sumOfMultiplies 999
+
+sumOfMultiplies :: Integer -> Integer
+sumOfMultiplies limit = sum $ filter multiplies [1 .. limit]
   where multiplies x = x `mod` 3 == 0 || x `mod` 5 == 0

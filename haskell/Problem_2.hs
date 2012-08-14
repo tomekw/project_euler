@@ -12,6 +12,9 @@
 
 module Problem_2 where
 
-evenFibonacciSum :: Integer
-evenFibonacciSum = sum $ filter even $ takeWhile (< 4000000) fibonacciSequence
+problem_2 :: Integer
+problem_2 = evenFibonacciSum 4000000
+
+evenFibonacciSum :: Integer -> Integer
+evenFibonacciSum limit = sum $ filter even $ takeWhile (< limit) fibonacciSequence
   where fibonacciSequence = 1 : 2 : zipWith (+) fibonacciSequence (tail fibonacciSequence)
