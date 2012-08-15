@@ -7,8 +7,10 @@
 #
 # http://projecteuler.net/problem=1
 
-def sum_of_multiplies
-  (1 .. 999).select { |e| e % 3 == 0 || e % 5 == 0 }.reduce(&:+)
+def problem_1
+  sum_of_multiplies(999)
 end
 
-puts sum_of_multiplies
+def sum_of_multiplies(limit)
+  (1 .. limit).select { |e| e % 3 == 0 || e % 5 == 0 }.reduce(&:+)
+end
