@@ -15,4 +15,6 @@ problem_2 = evenFibonacciSum 4000000
 
 evenFibonacciSum :: Integer -> Integer
 evenFibonacciSum limit = sum $ filter even $ takeWhile (< limit) fibonacciSequence
-  where fibonacciSequence = 1 : 2 : zipWith (+) fibonacciSequence (tail fibonacciSequence)
+
+fibonacciSequence :: [Integer]
+fibonacciSequence = 1 : 2 : zipWith (+) fibonacciSequence (tail fibonacciSequence)
