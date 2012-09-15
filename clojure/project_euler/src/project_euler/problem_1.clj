@@ -8,7 +8,7 @@
 (ns project_euler.problem_1)
 
 (defn sum-of-multiplies [limit]
-  (apply + (filter (fn [x] (or (= (mod x 3) 0) (= (mod x 5) 0))) (take limit (iterate inc 1)))))
+  (apply + (filter (fn [x] (or (= (mod x 3) 0) (= (mod x 5) 0))) (range 1 limit))))
 
 (defn problem-1 []
-  (sum-of-multiplies 999))
+  (sum-of-multiplies 1000))

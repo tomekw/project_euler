@@ -3,4 +3,4 @@
   (:use [clojure.test]))
 
 (deftest test-sum-of-multiplies
-  (is (= 23 (sum-of-multiplies 9))))
+  (is (= 23 (sum-of-multiplies 10))))
