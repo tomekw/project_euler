@@ -17,7 +17,7 @@
   (map first (iterate fibonacci-pair [1 1])))
 
 (defn even-fibonacci-sum [limit]
-  (apply + (filter even? (take-while (fn [x] (< x limit)) (fibonacci-sequence)))))
+  (reduce + (filter even? (take-while (partial > limit) (fibonacci-sequence)))))
 
 (defn problem-2 []
   (even-fibonacci-sum 4000000))
