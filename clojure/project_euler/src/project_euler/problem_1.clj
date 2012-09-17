@@ -7,8 +7,15 @@
 
 (ns project_euler.problem_1)
 
+(defn mod-x [x]
+  (fn [n] (= (mod n x) 0)))
+
+(def mod3 (mod-x 3))
+
+(def mod5 (mod-x 5))
+
 (defn sum-of-multiplies [limit]
-  (apply + (filter (fn [x] (or (= (mod x 3) 0) (= (mod x 5) 0))) (range 1 limit))))
+  (apply + (filter #(or (mod3 %) (mod5 %)) (range 1 limit))))
 
 (defn problem-1 []
   (sum-of-multiplies 1000))
