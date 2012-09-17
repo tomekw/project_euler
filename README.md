@@ -1,3 +1,3 @@
 # Project Euler
 
-My way of learning Haskell
+My way of learning functional programming
